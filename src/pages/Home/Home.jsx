@@ -1,0 +1,377 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import "./Home.css";
+
+const Home = () => {
+  const particlesInit = async (engine) => {
+    await loadSlim(engine);
+  };
+
+  const openInstagram = () => {
+    window.open("https://www.instagram.com/aarohi_vnitnagpur/", "_blank");
+  };
+
+  const [flippedCards, setFlippedCards] = useState([]);
+
+  const toggleCardFlip = (index) => {
+    if (flippedCards.includes(index)) {
+      setFlippedCards(flippedCards.filter((i) => i !== index));
+    } else {
+      setFlippedCards([...flippedCards, index]);
+    }
+  };
+
+  return (
+    <div className="home-page">
+      {/* Hero Section with Particles */}
+      <section className="hero-section">
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          options={{
+            background: {
+              color: {
+                value: "transparent",
+              },
+            },
+            fpsLimit: 60,
+            interactivity: {
+              events: {
+                onClick: {
+                  enable: true,
+                  mode: "push",
+                },
+                onHover: {
+                  enable: true,
+                  mode: "repulse",
+                },
+                resize: true,
+              },
+              modes: {
+                push: {
+                  quantity: 4,
+                },
+                repulse: {
+                  distance: 100,
+                  duration: 0.4,
+                },
+              },
+            },
+            particles: {
+              color: {
+                value: "#FF8C00", // Changed from #ffd700 to orange
+              },
+              links: {
+                value: "#FF8C00", // Changed from #ffd700 to orange
+                distance: 150,
+                enable: true,
+                opacity: 0.3,
+                width: 1,
+              },
+              move: {
+                direction: "none",
+                enable: true,
+                outModes: {
+                  default: "bounce",
+                },
+                random: false,
+                speed: 2,
+                straight: false,
+              },
+              number: {
+                density: {
+                  enable: true,
+                  area: 800,
+                },
+                value: 60,
+              },
+              opacity: {
+                value: 0.5,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                value: { min: 1, max: 3 },
+              },
+            },
+            detectRetina: true,
+          }}
+          className="particles"
+        />
+
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+          <h1 className="hero-title">
+            Welcome to{" "}
+            <span>
+              <h1>VNIT NAGPUR</h1>
+            </span>
+          </h1>
+          <p className="hero-subtitle">The Students' Playbook From Aarohi'25</p>
+          <p className="hero-subcontent">
+            From orientation to placements, track your progress and plan ahead
+            for every phase of your undergraduate life.
+          </p>
+          <div className="hero-buttons">
+            <Link to="/timeline" className="hero-button primary">
+              Event Timeline
+            </Link>
+            <button onClick={openInstagram} className="hero-button secondary">
+              Visit our Social Media
+            </button>
+          </div>
+        </div>
+      </section>
+      {/* About Section */}
+      <section className="about-section">
+        <div className="container">
+          <SectionTitle
+            title="About VNIT Nagpur"
+            subtitle="Premier technical institute in central India"
+          />
+          <div className="about-content">
+            <div className="about-text">
+              <p>
+                Visvesvaraya National Institute of Technology Nagpur (VNIT
+                Nagpur) is a premier public technical university established in
+                1960. Originally established as Visvesvaraya Regional College of
+                Engineering, it was later granted NIT status.
+              </p>
+              <p>
+                The institute is named after the eminent engineer Sir M.
+                Visvesvaraya and is recognized as an Institute of National
+                Importance. It offers undergraduate, postgraduate and doctoral
+                programs in various engineering and science disciplines.
+              </p>
+              <p>
+                The 215-acre campus features state-of-the-art academic
+                facilities, research centers, hostels, and sports complexes.
+                VNIT Nagpur consistently ranks among the top engineering
+                colleges in India.
+              </p>
+            </div>
+            <div className="about-image">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a8/VNIT_Nagpur_main.jpg"
+                alt="VNIT Nagpur"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Aarohi Section */}
+      <section className="aarohi-section">
+        <div className="container">
+          <SectionTitle
+            title="About Aarohi"
+            subtitle="The freshers' welcome event"
+          />
+
+          <div className="aarohi-description">
+            <p>
+              Aarohi is the official freshers' welcome event of VNIT Nagpur,
+              organized by students for students. This vibrant 3-day orientation
+              program introduces newcomers to campus life through a mix of fun
+              activities, informative sessions, and cultural performances.
+              Designed to help freshers transition smoothly into college life,
+              Aarohi creates lasting memories while fostering connections
+              between seniors and juniors.
+            </p>
+          </div>
+
+          {/* Infinite Scrolling Gallery */}
+          <div className="aarohi-gallery-container">
+            <div className="aarohi-gallery">
+              <div className="aarohi-gallery-track">
+                {/* First set of images */}
+                {[
+                  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1496337589254-7e19d01cec44?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                ].map((img, index) => (
+                  <div key={`first-${index}`} className="aarohi-gallery-item">
+                    <img src={img} alt={`Aarohi event ${index + 1}`} />
+                    <div className="gallery-item-overlay"></div>
+                  </div>
+                ))}
+
+                {/* Duplicate for infinite effect */}
+                {[
+                  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1496337589254-7e19d01cec44?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                  "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                ].map((img, index) => (
+                  <div key={`second-${index}`} className="aarohi-gallery-item">
+                    <img src={img} alt={`Aarohi event ${index + 1}`} />
+                    <div className="gallery-item-overlay"></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* // Major Events Section */}
+      <section className="major-events-section">
+        <div className="container">
+          <SectionTitle
+            title="Major Events"
+            subtitle="Key events during your VNIT journey"
+          />
+          <div className="events-grid">
+            {/* DG Card */}
+            <div
+              className={`event-card ${
+                flippedCards.includes(0) ? "flipped" : ""
+              }`}
+              onClick={() => toggleCardFlip(0)}
+            >
+              <div className="event-card-inner">
+                <div className="event-card-front">
+                  <div className="event-icon">
+                    <i className="fas fa-users"></i>
+                  </div>
+                  <h3>Departmental Gathering</h3>
+                  <p>Celebrate your department spirit</p>
+                </div>
+                <div className="event-card-back">
+                  <h3>Departmental Gathering</h3>
+                  <div className="event-date">August - September</div>
+                  <p>
+                    A fun-filled event where each department showcases its
+                    talent through performances, games and activities. Great
+                    opportunity to bond with your department mates.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* IG Card */}
+            <div
+              className={`event-card ${
+                flippedCards.includes(1) ? "flipped" : ""
+              }`}
+              onClick={() => toggleCardFlip(1)}
+            >
+              <div className="event-card-inner">
+                <div className="event-card-front">
+                  <div className="event-icon">
+                    <i className="fas fa-university"></i>
+                  </div>
+                  <h3>Institute Gathering</h3>
+                  <p>Whole college comes together</p>
+                </div>
+                <div className="event-card-back">
+                  <h3>Institute Gathering</h3>
+                  <div className="event-date">January</div>
+                  <p>
+                    The biggest cultural event where all departments compete in
+                    various competitions. Features performances, competitions
+                    and celebrity performances.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Aarohi Card */}
+            <div
+              className={`event-card ${
+                flippedCards.includes(2) ? "flipped" : ""
+              }`}
+              onClick={() => toggleCardFlip(2)}
+            >
+              <div className="event-card-inner">
+                <div className="event-card-front">
+                  <div className="event-icon">
+                    <i className="fas fa-music"></i>
+                  </div>
+                  <h3>Aarohi</h3>
+                  <p>Freshers' Welcome Event</p>
+                </div>
+                <div className="event-card-back">
+                  <h3>Aarohi</h3>
+                  <div className="event-date">July - August</div>
+                  <p>
+                    The official freshers' welcome event spanning 3 days with
+                    cultural performances, fun activities and orientation
+                    sessions to help you settle in.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Axis Card */}
+            <div
+              className={`event-card ${
+                flippedCards.includes(3) ? "flipped" : ""
+              }`}
+              onClick={() => toggleCardFlip(3)}
+            >
+              <div className="event-card-inner">
+                <div className="event-card-front">
+                  <div className="event-icon">
+                    <i className="fas fa-robot"></i>
+                  </div>
+                  <h3>Axis</h3>
+                  <p>Technical Festival</p>
+                </div>
+                <div className="event-card-back">
+                  <h3>Axis</h3>
+                  <div className="event-date">March</div>
+                  <p>
+                    VNIT's annual technical festival featuring competitions,
+                    workshops, guest lectures and exhibitions showcasing
+                    technological innovations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* E-Cell Card */}
+            <div
+              className={`event-card ${
+                flippedCards.includes(4) ? "flipped" : ""
+              }`}
+              onClick={() => toggleCardFlip(4)}
+            >
+              <div className="event-card-inner">
+                <div className="event-card-front">
+                  <div className="event-icon">
+                    <i className="fas fa-lightbulb"></i>
+                  </div>
+                  <h3>E-Cell Events</h3>
+                  <p>Entrepreneurship initiatives</p>
+                </div>
+                <div className="event-card-back">
+                  <h3>E-Cell Events</h3>
+                  <div className="event-date">Throughout the year</div>
+                  <p>
+                    Various entrepreneurship events including startup
+                    competitions, speaker sessions, and workshops to foster
+                    innovation and business skills.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;

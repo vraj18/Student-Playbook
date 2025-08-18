@@ -1,0 +1,124 @@
+import React from 'react';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import './Timeline.css';
+
+const Timeline = () => {
+  const events = [
+    {
+      id: 1,
+      date: '06th July 2025',
+      title: 'Muharram (Holiday)',
+      description: 'Islamic New Year holiday - no classes scheduled.'
+    },
+    {
+      id: 2,
+      date: '15th August 2025',
+      title: 'Independence Day (Holiday)',
+      description: 'National holiday celebrating India\'s independence.'
+    },
+    {
+      id: 3,
+      date: '27th August 2025',
+      title: 'Ganesh Chaturthi (Holiday)',
+      description: 'Celebration of Lord Ganesha\'s birthday - holiday for all students.'
+    },
+    {
+      id: 4,
+      date: '07th September 2025',
+      title: 'Freshers Event',
+      description: 'Welcome event for new students with performances and introductions.'
+    },
+    
+    {
+      id: 5,
+      date: '15th September 2025',
+      title: 'Convocation',
+      description: 'Annual convocation ceremony for graduating students.'
+    },
+    {
+      id: 6,
+      date: '22nd Sept - 30th Sept 2025',
+      title: 'Mid Semester Examinations',
+      description: 'First major exams of the semester - prepare well!'
+    },
+    
+    {
+      id: 7,
+      date: '20th October 2025',
+      title: 'Diwali (Holiday)',
+      description: 'Festival of lights holiday break.'
+    },
+    
+    
+    {
+      id: 8,
+      date: '07th - 10th November 2025',
+      title: 'Karwan + Aarohi Events',
+      description: 'Cultural festival and freshers welcome activities.'
+    },
+    {
+      id: 9,
+      date: '14th - 16th November 2025',
+      title: 'Department Gatherings',
+      description: 'Department-specific events and networking opportunities.'
+    },
+    {
+      id: 10,
+      date: '26th Nov - 04th Dec 2025',
+      title: 'End Semester Examinations',
+      description: 'Final exams for the semester - study hard!'
+    },
+    {
+      id: 11,
+      date: '25th December 2025',
+      title: 'Christmas Day (Holiday)',
+      description: 'Christmas holiday break.'
+    },
+    {
+      id: 12,
+      date: '22nd - 26th December 2025',
+      title: 'Re-examination Period',
+      description: 'Make-up exams for students who need them.'
+    },
+    
+  ];
+
+  return (
+    <div className="timeline-page">
+      <section className="timeline-section">
+        <div className="container">
+          <SectionTitle 
+            title="Academic Calendar 2025-26" 
+            subtitle="Major Events and Holidays" 
+          />
+          <div className="timeline-container">
+            {events.map((event, index) => (
+              <div 
+                key={event.id} 
+                className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
+                data-aos="fade-up"
+              >
+                <div className="timeline-date">{event.date}</div>
+                <div className="timeline-content">
+                  <h3 className="timeline-title">{event.title}</h3>
+                  <p className="timeline-description">{event.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="calendar-download">
+            <a 
+              href="/calendar.pdf" 
+              download="VNIT_Academic_Calendar_2025.pdf"
+              className="download-button"
+            >
+              Download Full Academic Calendar (PDF)
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Timeline;

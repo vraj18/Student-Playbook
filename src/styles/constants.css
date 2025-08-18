@@ -1,0 +1,91 @@
+:root {
+    /* Color Palette - Light Theme with Orange Accents */
+    --primary-bg: #f5f5f5;          /* Off-white background */
+    --secondary-bg: #e8e8e8;        /* Slightly darker off-white */
+    --tertiary-bg: #dcdcdc;         /* Even darker for contrast */
+    --text-color: #333333;          /* Dark gray for text */
+    --text-secondary: #555555;      /* Slightly lighter text */
+    --accent-color: #FF8C00;        /* Dark Orange */
+    --accent-dark: #CC7000;         /* Darker Orange */
+    --accent-light: #FFB366;        /* Light Orange */
+    --gray-text: #777777;           /* Medium gray */
+    --dark-gray: #999999;           /* Lighter than before */
+    --medium-gray: #bbbbbb;         /* Medium gray */
+    --light-gray: #dddddd;          /* Light gray */
+    
+    /* Typography (unchanged) */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+    --font-size-xxxl: 2.5rem;
+    --font-size-display: 3.5rem;
+    
+    /* Spacing (unchanged) */
+    --space-xxs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-xxl: 3rem;
+    --space-xxxl: 4rem;
+    
+    /* Border Radius (unchanged) */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-rounded: 50%;
+    --radius-pill: 9999px;
+    
+    /* Shadows - Updated for light theme */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    --shadow-accent: 0 0 15px rgba(255, 140, 0, 0.3);
+    
+    /* Transitions (unchanged) */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-bounce: 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    
+    /* Z-index (unchanged) */
+    --z-index-dropdown: 100;
+    --z-index-sticky: 200;
+    --z-index-fixed: 300;
+    --z-index-modal: 400;
+    --z-index-toast: 500;
+}
+
+/* Responsive Breakpoints (unchanged) */
+@media (min-width: 640px) {
+    :root {
+        --font-size-display: 4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --font-size-display: 4.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --font-size-display: 5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --font-size-display: 5.5rem;
+    }
+}
