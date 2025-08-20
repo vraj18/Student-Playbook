@@ -42,7 +42,7 @@ const Timeline = () => {
     {
       id: 9,
       date: '14th - 16th November 2025',
-      title: 'Department Gatherings',
+      title: 'Department Gathering',
       description: 'Department-specific events and networking opportunities.'
     },
     {

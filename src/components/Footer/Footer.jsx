@@ -1,7 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaEnvelope, FaYoutube, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import './Footer.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaEnvelope,
+  FaYoutube,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -10,8 +17,9 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">About Aarohi</h3>
           <p className="footer-text">
-            Aarohi is the annual freshers' welcome event organized by VNIT Nagpur to introduce
-            new students to campus life, academics, and opportunities.
+            Aarohi is VNIT Nagpur’s annual cultural fest, celebrated as Central
+            India’s largest student-run festival. Spanning three days, it brings
+            cultural, technical, literary events and two spectacular pro-shows.
           </p>
         </div>
 
@@ -22,7 +30,7 @@ const Footer = () => {
               <FaEnvelope className="footer-icon" />
               <span>vnitaarohi25@gmail.com</span>
             </li>
-           
+
             <li>
               <span>VNIT Nagpur - 440010</span>
             </li>
@@ -32,20 +40,39 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Follow Us</h3>
           <div className="footer-social">
-            
-            <a href="https://www.instagram.com/aarohi_vnitnagpur/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/aarohi_vnitnagpur/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram className="social-icon" />
             </a>
-            <a href="https://www.youtube.com/@VNITAarohi" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.youtube.com/@VNITAarohi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaYoutube className="social-icon" />
             </a>
-            <a href="https://www.linkedin.com/company/aarohivnit/?originalSubdomain=in" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/company/aarohivnit/?originalSubdomain=in"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin className="social-icon" />
             </a>
-            <a href="https://x.com/aarohi_vnit" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://x.com/aarohi_vnit"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaTwitter className="social-icon" />
             </a>
-            <a href="https://www.facebook.com/AarohiWorld/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/AarohiWorld/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebook className="social-icon" />
             </a>
           </div>
@@ -68,15 +95,11 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
-        
-
-        
       </div>
 
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Aarohi-25. All Rights Reserved. |{' '}
+          &copy; {new Date().getFullYear()} Aarohi-25. All Rights Reserved. |{" "}
           <span className="gold-text">VNIT Nagpur</span>
         </p>
       </div>

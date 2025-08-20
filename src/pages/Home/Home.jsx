@@ -111,18 +111,15 @@ const Home = () => {
               <h1>VNIT NAGPUR</h1>
             </span>
           </h1>
-          <p className="hero-subtitle">The Students' Playbook From Aarohi'25</p>
-          <p className="hero-subcontent">
-            From orientation to placements, track your progress and plan ahead
-            for every phase of your undergraduate life.
-          </p>
+          <p className="hero-subtitle">The Fresher's Guide From Aarohi'25</p>
+          
           <div className="hero-buttons">
-            <Link to="/timeline" className="hero-button primary">
-              Event Timeline
-            </Link>
-            <button onClick={openInstagram} className="hero-button secondary">
+            <button onClick={openInstagram} className="hero-button primary">
               Visit our Social Media
             </button>
+            <Link to="/timeline" className="hero-button secondary ">
+              Event Timeline
+            </Link>
           </div>
         </div>
       </section>
@@ -168,7 +165,7 @@ const Home = () => {
         <div className="container">
           <SectionTitle
             title="About Aarohi"
-            subtitle="The freshers' welcome event"
+            subtitle="Central India's Largest Cultural Fest"
           />
 
           <div className="aarohi-description">
@@ -242,9 +239,8 @@ const Home = () => {
                   <h3>Departmental Gathering</h3>
                   <div className="event-date">August - September</div>
                   <p>
-                    A fun-filled event where each department showcases its
-                    talent through performances, games and activities. Great
-                    opportunity to bond with your department mates.
+                    A 3-day celebration where the entire department unites to
+                    bond and showcase spirit.
                   </p>
                 </div>
               </div>
@@ -267,11 +263,10 @@ const Home = () => {
                 </div>
                 <div className="event-card-back">
                   <h3>Institute Gathering</h3>
-                  <div className="event-date">January</div>
+                  <div className="event-date">January-February</div>
                   <p>
-                    The biggest cultural event where all departments compete in
-                    various competitions. Features performances, competitions
-                    and celebrity performances.
+                    A grand 10-day extravaganza where all departments compete
+                    for the coveted IG Trophy.
                   </p>
                 </div>
               </div>
@@ -294,11 +289,11 @@ const Home = () => {
                 </div>
                 <div className="event-card-back">
                   <h3>Aarohi</h3>
-                  <div className="event-date">August</div>
+                  <div className="event-date">November</div>
                   <p>
-                    The official cultural fest spanning 3 days with
-                    cultural,technical and literary events, fun activities and
-                    proshows.
+                    The official cultural fest spanning 3 days with cultural,
+                    technical, and literary events, fun activities, and
+                    pro-shows featuring renowned artists and performers.
                   </p>
                 </div>
               </div>
@@ -323,9 +318,36 @@ const Home = () => {
                   <h3>Axis</h3>
                   <div className="event-date">March</div>
                   <p>
-                    VNIT's annual technical festival featuring competitions,
-                    workshops, guest lectures and exhibitions showcasing
-                    technological innovations.
+                    VNIT's annual technical festival filled with technical
+                    competitions, workshops, exhibitions, and guest lectures
+                    that showcase innovation and cutting-edge ideas.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Consortium (E-Cell) Card */}
+            <div
+              className={`event-card ${
+                flippedCards.includes(4) ? "flipped" : ""
+              }`}
+              onClick={() => toggleCardFlip(4)}
+            >
+              <div className="event-card-inner">
+                <div className="event-card-front">
+                  <div className="event-icon">
+                    <i className="fas fa-lightbulb"></i>
+                  </div>
+                  <h3>Consortium (E-Cell)</h3>
+                  <p>Entrepreneurship Festival</p>
+                </div>
+                <div className="event-card-back">
+                  <h3>Consortium (E-Cell)</h3>
+                  <div className="event-date">February</div>
+                  <p>
+                    The flagship entrepreneurship fest with startup showcases,
+                    pitch battles, workshops, and events that celebrate
+                    innovation, leadership, and growth.
                   </p>
                 </div>
               </div>
