@@ -300,15 +300,14 @@ const Home = () => {
                     <i className="fas fa-music"></i>
                   </div>
                   <h3>Aarohi</h3>
-                  <p>Freshers' Welcome Event</p>
+                  <p>The Official Cultural Fest</p>
                 </div>
                 <div className="event-card-back">
                   <h3>Aarohi</h3>
-                  <div className="event-date">July - August</div>
+                  <div className="event-date">August</div>
                   <p>
-                    The official freshers' welcome event spanning 3 days with
-                    cultural performances, fun activities and orientation
-                    sessions to help you settle in.
+                    The official cultural fest spanning 3 days with
+                    cultural,technical and literary events, fun activities and proshows.
                   </p>
                 </div>
               </div>
@@ -341,32 +340,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* E-Cell Card */}
-            <div
-              className={`event-card ${
-                flippedCards.includes(4) ? "flipped" : ""
-              }`}
-              onClick={() => toggleCardFlip(4)}
-            >
-              <div className="event-card-inner">
-                <div className="event-card-front">
-                  <div className="event-icon">
-                    <i className="fas fa-lightbulb"></i>
-                  </div>
-                  <h3>E-Cell Events</h3>
-                  <p>Entrepreneurship initiatives</p>
-                </div>
-                <div className="event-card-back">
-                  <h3>E-Cell Events</h3>
-                  <div className="event-date">Throughout the year</div>
-                  <p>
-                    Various entrepreneurship events including startup
-                    competitions, speaker sessions, and workshops to foster
-                    innovation and business skills.
-                  </p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>

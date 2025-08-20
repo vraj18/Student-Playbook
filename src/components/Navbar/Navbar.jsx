@@ -32,7 +32,11 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${mobileMenuOpen ? 'menu-open' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          STUDENT PLAYBOOK
+          <img 
+            src="/logo.png" 
+            alt="Aarohi Logo" 
+            className="navbar-logo-image"
+          />
         </Link>
 
         <div className="menu-icon" onClick={toggleMobileMenu}>

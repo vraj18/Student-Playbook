@@ -44,20 +44,47 @@
   padding: 0 20px;
 }
 
+/* Navbar Logo Image Styles */
 .navbar-logo {
-  color: #333; /* Dark text */
-  cursor: pointer;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  z-index: 1001;
 }
 
-.navbar-logo:hover {
-  color: var(--accent-color); /* Orange on hover */
+.navbar-logo-image {
+  height: 40px; /* Adjust based on your logo's aspect ratio */
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
 }
+
+/* Scrolled state adjustments */
+.navbar.scrolled .navbar-logo-image {
+  height: 35px; /* Slightly smaller when scrolled */
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 960px) {
+  .navbar-logo-image {
+    height: 35px;
+  }
+  
+  .navbar.scrolled .navbar-logo-image {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-logo-image {
+    height: 30px;
+  }
+  
+  .navbar.scrolled .navbar-logo-image {
+    height: 25px;
+  }
+}
+
+
 
 /* Hamburger Menu */
 .menu-icon {

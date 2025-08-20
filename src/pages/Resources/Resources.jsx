@@ -17,6 +17,13 @@ const Resources = () => {
       description: 'Complete study materials for Chemistry Semester',
       link: 'https://drive.google.com/drive/folders/1wZQtdf2HTH1k2iwfa_p0KIaa6sbrGWJS',
       icon: 'fas fa-book'
+    },
+    {
+      id: 'Architecture',
+      title: 'Architecture Semester Materials',
+      description: 'Complete study materials for Architecture Students',
+      link: 'https://drive.google.com/drive/folders/1Xijxhunl3JzQLwXI7XSsrCiH6T47lYbV?usp=sharing',
+      icon: 'fas fa-book'
     }
   ];
 

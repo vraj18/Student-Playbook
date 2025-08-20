@@ -4,24 +4,7 @@ import './Timeline.css';
 
 const Timeline = () => {
   const events = [
-    {
-      id: 1,
-      date: '06th July 2025',
-      title: 'Muharram (Holiday)',
-      description: 'Islamic New Year holiday - no classes scheduled.'
-    },
-    {
-      id: 2,
-      date: '15th August 2025',
-      title: 'Independence Day (Holiday)',
-      description: 'National holiday celebrating India\'s independence.'
-    },
-    {
-      id: 3,
-      date: '27th August 2025',
-      title: 'Ganesh Chaturthi (Holiday)',
-      description: 'Celebration of Lord Ganesha\'s birthday - holiday for all students.'
-    },
+    
     {
       id: 4,
       date: '07th September 2025',
@@ -37,7 +20,7 @@ const Timeline = () => {
     },
     {
       id: 6,
-      date: '22nd Sept - 30th Sept 2025',
+      date: '1st Oct - 10th Oct 2025',
       title: 'Mid Semester Examinations',
       description: 'First major exams of the semester - prepare well!'
     },
@@ -52,9 +35,9 @@ const Timeline = () => {
     
     {
       id: 8,
-      date: '07th - 10th November 2025',
-      title: 'Karwan + Aarohi Events',
-      description: 'Cultural festival and freshers welcome activities.'
+      date: '07th - 9th November 2025',
+      title: 'Aarohi-25',
+      description: 'The Official Cultural festival of VNIT Nagpur.'
     },
     {
       id: 9,
