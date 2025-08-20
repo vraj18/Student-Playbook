@@ -88,15 +88,7 @@ const Timeline = () => {
               </div>
             ))}
           </div>
-          <div className="calendar-download">
-            <a 
-              href="/calendar.pdf" 
-              download="VNIT_Academic_Calendar_2025.pdf"
-              className="download-button"
-            >
-              Download Full Academic Calendar (PDF)
-            </a>
-          </div>
+          
         </div>
       </section>
     </div>
