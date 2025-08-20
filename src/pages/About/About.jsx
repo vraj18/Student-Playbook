@@ -64,7 +64,7 @@ const About = () => {
           <div className="section-content">
             <p>
               Aarohi-25 is the official cultural event of our institution,
-              dedicated to fostering innovation and technical excellence among
+              dedicated to fostering innovation and cultural excellence among
               students.
             </p>
           </div>
