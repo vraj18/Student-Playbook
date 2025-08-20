@@ -14,7 +14,7 @@ const About = () => {
         "A high-voltage rock music extravaganza celebrating the spirit of rock and roll. Experience electrifying performances by talented bands and solo artists in this unforgettable musical journey.",
     },
     {
-      name: "Swaramanzar",
+      name: "Swarmanzar",
       description:
         "The premier singing competition that discovers the finest vocal talents. Participants showcase their musical prowess across genres, battling for the coveted title of best singer.",
     },
@@ -44,7 +44,7 @@ const About = () => {
         "A nostalgic Bollywood musical quiz that tests your knowledge of Hindi film songs. Teams compete in this fun-filled musical battle, singing verses back and forth in classic antakshari style.",
     },
     {
-      name: "Ala Dance",
+      name: "Ala Danse",
       description:
         "The most anticipated dance competition featuring breathtaking performances across styles. From classical to contemporary, solo to group acts, witness the magic of movement and rhythm.",
     },
@@ -60,10 +60,10 @@ const About = () => {
       <div className="about-container">
         {/* Aarohi-25 Section */}
         <div className="section-block">
-          <h3 className="section-title">Aarohi-25</h3>
+          <h3 className="section-title">Aarohi'25</h3>
           <div className="section-content">
             <p>
-              Aarohi-25 is the official cultural event of our institution,
+              Aarohi'25 is the official cultural event of our institution,
               dedicated to fostering innovation and cultural excellence among
               students.
             </p>
@@ -76,7 +76,7 @@ const About = () => {
             <i className="fas fa-eye"></i>
             <h4>Our Vision</h4>
             <p>
-              Aarohi-25 aspires to be a transformative cultural-technical
+              Aarohi'25 aspires to be a transformative cultural-technical
               festival that unleashes creativity, celebrates diverse talents,
               and bridges innovation with artistic expression, empowering
               students to become visionary leaders of tomorrow.
@@ -86,7 +86,7 @@ const About = () => {
             <i className="fas fa-bullseye"></i>
             <h4>Our Mission</h4>
             <p>
-              Aarohi-25 is dedicated to fostering holistic growth by providing a
+              Aarohi'25 is dedicated to fostering holistic growth by providing a
               vibrant platform for competitive and collaborative excellence in
               gaming, music, theater, and debate while nurturing technical
               prowess and cultural pride.

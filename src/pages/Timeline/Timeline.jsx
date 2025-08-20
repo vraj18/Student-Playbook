@@ -6,33 +6,38 @@ const Timeline = () => {
   const events = [
     
     {
-      id: 4,
+      id: 3,
       date: '07th September 2025',
-      title: 'Freshers Event',
+      title: 'Cultnite',
       description: 'Welcome event for new students with performances and introductions.'
     },
     
     {
-      id: 5,
+      id: 4,
       date: '15th September 2025',
       title: 'Convocation',
       description: 'Annual convocation ceremony for graduating students.'
     },
     {
-      id: 6,
+      id: 5,
       date: '1st Oct - 10th Oct 2025',
       title: 'Mid Semester Examinations',
       description: 'First major exams of the semester - prepare well!'
     },
     
     {
-      id: 7,
+      id: 6,
       date: '20th October 2025',
       title: 'Diwali (Holiday)',
       description: 'Festival of lights holiday break.'
     },
-    
-    
+    {
+      id: 7,
+      date: '2nd November 2025',
+      title: 'Freshers Event',
+      description: 'Set of events and performances for freshers.'
+    },
+
     {
       id: 8,
       date: '07th - 9th November 2025',
@@ -54,15 +59,9 @@ const Timeline = () => {
     {
       id: 11,
       date: '25th December 2025',
-      title: 'Christmas Day (Holiday)',
-      description: 'Christmas holiday break.'
-    },
-    {
-      id: 12,
-      date: '22nd - 26th December 2025',
-      title: 'Re-examination Period',
-      description: 'Make-up exams for students who need them.'
-    },
+      title: 'Winter Holiday',
+      description: 'Winter holiday break.'
+    }
     
   ];
 

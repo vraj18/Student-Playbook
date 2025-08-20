@@ -88,10 +88,10 @@ const Footer = () => {
               <Link to="/timeline">Event Timeline</Link>
             </li>
             <li>
-              <Link to="/profiles">Student Profiles</Link>
+              <Link to="/resources">Academic Resources</Link>
             </li>
             <li>
-              <Link to="/resources">Academic Resources</Link>
+              <Link to="/about">About Us</Link>
             </li>
           </ul>
         </div>
