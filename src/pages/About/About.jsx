@@ -14,7 +14,7 @@ const About = () => {
         "A high-voltage rock music extravaganza celebrating the spirit of rock and roll. Experience electrifying performances by talented bands and solo artists in this unforgettable musical journey.",
     },
     {
-      name: "Swaranzar",
+      name: "Swaramanzar",
       description:
         "The premier singing competition that discovers the finest vocal talents. Participants showcase their musical prowess across genres, battling for the coveted title of best singer.",
     },

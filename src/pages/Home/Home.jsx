@@ -173,13 +173,15 @@ const Home = () => {
 
           <div className="aarohi-description">
             <p>
-              Aarohi is the official freshers' welcome event of VNIT Nagpur,
-              organized by students for students. This vibrant 3-day orientation
-              program introduces newcomers to campus life through a mix of fun
-              activities, informative sessions, and cultural performances.
-              Designed to help freshers transition smoothly into college life,
-              Aarohi creates lasting memories while fostering connections
-              between seniors and juniors.
+              Aarohi is the official annual cultural fest of VNIT Nagpur,
+              celebrated as Central India’s largest three-day student-run
+              festival since 1989. It hosts a vibrant blend of cultural,
+              technical, and literary events, along with crowd-pulling informal
+              attractions and two grand pro-shows featuring renowned artists and
+              performers. With competitions like A La Danse, Purple Haze, and
+              Hunkar, Aarohi not only showcases talent but also fosters
+              creativity, collaboration, and community, making it a defining
+              experience for students and visitors alike.
             </p>
           </div>
 
@@ -188,35 +190,23 @@ const Home = () => {
             <div className="aarohi-gallery">
               <div className="aarohi-gallery-track">
                 {/* First set of images */}
-                {[
-                  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1496337589254-7e19d01cec44?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                ].map((img, index) => (
+                {[1, 2, 3, 4, 5, 6].map((num, index) => (
                   <div key={`first-${index}`} className="aarohi-gallery-item">
-                    <img src={img} alt={`Aarohi event ${index + 1}`} />
+                    <img
+                      src={`/gallery/${num}.png`}
+                      alt={`Aarohi event ${num}`}
+                    />
                     <div className="gallery-item-overlay"></div>
                   </div>
                 ))}
 
                 {/* Duplicate for infinite effect */}
-                {[
-                  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1496337589254-7e19d01cec44?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                  "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                ].map((img, index) => (
+                {[1, 2, 3, 4, 5, 6].map((num, index) => (
                   <div key={`second-${index}`} className="aarohi-gallery-item">
-                    <img src={img} alt={`Aarohi event ${index + 1}`} />
+                    <img
+                      src={`/gallery/${num}.png`}
+                      alt={`Aarohi event duplicate ${num}`}
+                    />
                     <div className="gallery-item-overlay"></div>
                   </div>
                 ))}
@@ -307,7 +297,8 @@ const Home = () => {
                   <div className="event-date">August</div>
                   <p>
                     The official cultural fest spanning 3 days with
-                    cultural,technical and literary events, fun activities and proshows.
+                    cultural,technical and literary events, fun activities and
+                    proshows.
                   </p>
                 </div>
               </div>
@@ -339,8 +330,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
-            
           </div>
         </div>
       </section>
